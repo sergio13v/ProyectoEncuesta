@@ -12,6 +12,18 @@
         <title>Login Page</title>
     </head>
     <body>
+        
+        <% 
+        
+     String error = (String)request.getAttribute("error");
+     if (error == null) error = "";
+          
+               
+
+        %>
+        
+        <%=error%>
+        
         <form action ="ServletLogin">
             
             introduce tu nombre

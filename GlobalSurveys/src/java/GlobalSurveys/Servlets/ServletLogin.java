@@ -73,8 +73,12 @@ public class ServletLogin extends HttpServlet {
                    }
                                        
                } else {
-                    RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                
+                request.setAttribute("error", "clave incorrecta");
+                    RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
                     rd.forward(request, response);// La clave no es correcta
+                    
+               
            }
        }
        
