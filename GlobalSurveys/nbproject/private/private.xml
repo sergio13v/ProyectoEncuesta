@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Servlets/ServletGuardar.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/PanelUsuario.jsp</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Ejb/EncuestaFacade.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Ejb/AbstractFacade.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Ejb/UsuariosFacade.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Servlets/ServletLogin.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Ejb/SesionPreguntasFacade.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/index.html</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Ejb/RespuestaFacade.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Ejb/PreguntaFacade.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Ejb/SesionFacade.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Servlets/ServletListar.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Servlets/ServletRegistros.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/Encuesta.jsp</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/CrearEncuesta.jsp</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Servlets/ServletCrear.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/CrearPregunta.jsp</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/PanelAdmin.jsp</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/Registro.jsp</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/Login.jsp</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/src/java/GlobalSurveys/Servlets/ServletEditar.java</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/C:/Users/Articuno/Desktop/PROYECTO/GlobalSurveys/web/WEB-INF/web.xml</file>
+        </group>
+    </open-files>
+</project-private>
