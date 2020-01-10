@@ -6,8 +6,8 @@
 package GlobalSurveys.Entity;
 
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -52,10 +52,10 @@ public class Sesion implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fecha;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "sesion")
-    private Collection<SesionPreguntas> sesionPreguntasCollection;
+    private List<SesionPreguntas> sesionPreguntasList;
     @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
     @ManyToOne(optional = false)
-    private Usuarios idUsuario;
+    private Usuario idUsuario;
     @JoinColumn(name = "ID_ENCUESTA", referencedColumnName = "ID_ENCUESTA")
     @ManyToOne(optional = false)
     private Encuesta idEncuesta;
@@ -89,19 +89,19 @@ public class Sesion implements Serializable {
     }
 
     @XmlTransient
-    public Collection<SesionPreguntas> getSesionPreguntasCollection() {
-        return sesionPreguntasCollection;
+    public List<SesionPreguntas> getSesionPreguntasList() {
+        return sesionPreguntasList;
     }
 
-    public void setSesionPreguntasCollection(Collection<SesionPreguntas> sesionPreguntasCollection) {
-        this.sesionPreguntasCollection = sesionPreguntasCollection;
+    public void setSesionPreguntasList(List<SesionPreguntas> sesionPreguntasList) {
+        this.sesionPreguntasList = sesionPreguntasList;
     }
 
-    public Usuarios getIdUsuario() {
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuarios idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 

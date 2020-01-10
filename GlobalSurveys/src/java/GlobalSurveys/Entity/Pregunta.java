@@ -6,7 +6,7 @@
 package GlobalSurveys.Entity;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -48,12 +48,12 @@ public class Pregunta implements Serializable {
     @Size(min = 1, max = 100)
     @Column(name = "PREGUNTA")
     private String pregunta;
-    @ManyToMany(mappedBy = "preguntaCollection")
-    private Collection<Encuesta> encuestaCollection;
+    @ManyToMany(mappedBy = "preguntaList")
+    private List<Encuesta> encuestaList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pregunta")
-    private Collection<SesionPreguntas> sesionPreguntasCollection;
+    private List<SesionPreguntas> sesionPreguntasList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idPregunta")
-    private Collection<Respuesta> respuestaCollection;
+    private List<Respuesta> respuestaList;
 
     public Pregunta() {
     }
@@ -84,30 +84,30 @@ public class Pregunta implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Encuesta> getEncuestaCollection() {
-        return encuestaCollection;
+    public List<Encuesta> getEncuestaList() {
+        return encuestaList;
     }
 
-    public void setEncuestaCollection(Collection<Encuesta> encuestaCollection) {
-        this.encuestaCollection = encuestaCollection;
-    }
-
-    @XmlTransient
-    public Collection<SesionPreguntas> getSesionPreguntasCollection() {
-        return sesionPreguntasCollection;
-    }
-
-    public void setSesionPreguntasCollection(Collection<SesionPreguntas> sesionPreguntasCollection) {
-        this.sesionPreguntasCollection = sesionPreguntasCollection;
+    public void setEncuestaList(List<Encuesta> encuestaList) {
+        this.encuestaList = encuestaList;
     }
 
     @XmlTransient
-    public Collection<Respuesta> getRespuestaCollection() {
-        return respuestaCollection;
+    public List<SesionPreguntas> getSesionPreguntasList() {
+        return sesionPreguntasList;
     }
 
-    public void setRespuestaCollection(Collection<Respuesta> respuestaCollection) {
-        this.respuestaCollection = respuestaCollection;
+    public void setSesionPreguntasList(List<SesionPreguntas> sesionPreguntasList) {
+        this.sesionPreguntasList = sesionPreguntasList;
+    }
+
+    @XmlTransient
+    public List<Respuesta> getRespuestaList() {
+        return respuestaList;
+    }
+
+    public void setRespuestaList(List<Respuesta> respuestaList) {
+        this.respuestaList = respuestaList;
     }
 
     @Override

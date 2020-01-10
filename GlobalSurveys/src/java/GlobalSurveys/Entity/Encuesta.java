@@ -6,7 +6,7 @@
 package GlobalSurveys.Entity;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -60,9 +60,9 @@ public class Encuesta implements Serializable {
         @JoinColumn(name = "ID_ENCUESTA", referencedColumnName = "ID_ENCUESTA")}, inverseJoinColumns = {
         @JoinColumn(name = "ID_PREGUNTA", referencedColumnName = "ID_PREGUNTA")})
     @ManyToMany
-    private Collection<Pregunta> preguntaCollection;
+    private List<Pregunta> preguntaList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEncuesta")
-    private Collection<Sesion> sesionCollection;
+    private List<Sesion> sesionList;
 
     public Encuesta() {
     }
@@ -102,21 +102,21 @@ public class Encuesta implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Pregunta> getPreguntaCollection() {
-        return preguntaCollection;
+    public List<Pregunta> getPreguntaList() {
+        return preguntaList;
     }
 
-    public void setPreguntaCollection(Collection<Pregunta> preguntaCollection) {
-        this.preguntaCollection = preguntaCollection;
+    public void setPreguntaList(List<Pregunta> preguntaList) {
+        this.preguntaList = preguntaList;
     }
 
     @XmlTransient
-    public Collection<Sesion> getSesionCollection() {
-        return sesionCollection;
+    public List<Sesion> getSesionList() {
+        return sesionList;
     }
 
-    public void setSesionCollection(Collection<Sesion> sesionCollection) {
-        this.sesionCollection = sesionCollection;
+    public void setSesionList(List<Sesion> sesionList) {
+        this.sesionList = sesionList;
     }
 
     @Override

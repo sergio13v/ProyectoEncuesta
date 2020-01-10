@@ -6,7 +6,7 @@
 package GlobalSurveys.Entity;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -49,7 +49,7 @@ public class Respuesta implements Serializable {
     @Column(name = "RESPUESTA")
     private String respuesta;
     @OneToMany(mappedBy = "idRespuesta")
-    private Collection<SesionPreguntas> sesionPreguntasCollection;
+    private List<SesionPreguntas> sesionPreguntasList;
     @JoinColumn(name = "ID_PREGUNTA", referencedColumnName = "ID_PREGUNTA")
     @ManyToOne(optional = false)
     private Pregunta idPregunta;
@@ -83,12 +83,12 @@ public class Respuesta implements Serializable {
     }
 
     @XmlTransient
-    public Collection<SesionPreguntas> getSesionPreguntasCollection() {
-        return sesionPreguntasCollection;
+    public List<SesionPreguntas> getSesionPreguntasList() {
+        return sesionPreguntasList;
     }
 
-    public void setSesionPreguntasCollection(Collection<SesionPreguntas> sesionPreguntasCollection) {
-        this.sesionPreguntasCollection = sesionPreguntasCollection;
+    public void setSesionPreguntasList(List<SesionPreguntas> sesionPreguntasList) {
+        this.sesionPreguntasList = sesionPreguntasList;
     }
 
     public Pregunta getIdPregunta() {
