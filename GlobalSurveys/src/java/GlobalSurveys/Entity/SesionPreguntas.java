@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Articuno
+ * @author sergio13v
  */
 @Entity
 @Table(name = "SESION_PREGUNTAS")

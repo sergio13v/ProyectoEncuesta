@@ -5,8 +5,11 @@
  */
 package GlobalSurveys.Servlets;
 
+import GlobalSurveys.Ejb.PreguntaFacade;
+import GlobalSurveys.Entity.Pregunta;
 import java.io.IOException;
-import java.io.PrintWriter;
+import javax.ejb.EJB;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +23,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ServletCrear", urlPatterns = {"/ServletCrear"})
 public class ServletCrear extends HttpServlet {
 
+    @EJB
+    private PreguntaFacade preguntaFacade;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -31,19 +37,20 @@ public class ServletCrear extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ServletCrear</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ServletCrear at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        
+         Pregunta pregunta = new Pregunta(); 
+         String str = request.getParameter("id");
+         pregunta.setIdPregunta(new Long(str));
+         
+         str = request.getParameter("pregunta");
+         pregunta.setPregunta(str);
+         
+         
+
+        this.preguntaFacade.create(pregunta);
+        
+        RequestDispatcher rd = request.getRequestDispatcher("ServletLogin");
+        rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

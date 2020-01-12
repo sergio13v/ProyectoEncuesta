@@ -9,9 +9,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Creador de Preguntas</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <form action="ServletCrear">
+             <input type="hidden" name="id" value="0" />
+            CREADOR DE PREGUNTAS <br/> Enunciado de la pregunta:<input type="text" name="pregunta" value="" /> <br/>
+            
+            
+           
+           <input type="submit" value="Enviar" />
+        </form>
     </body>
 </html>

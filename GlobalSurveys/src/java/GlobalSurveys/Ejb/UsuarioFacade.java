@@ -5,7 +5,7 @@
  */
 package GlobalSurveys.Ejb;
 
-import GlobalSurveys.Entity.SesionPreguntas;
+import GlobalSurveys.Entity.Usuario;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author sergio13v
  */
 @Stateless
-public class SesionPreguntasFacade extends AbstractFacade<SesionPreguntas> {
+public class UsuarioFacade extends AbstractFacade<Usuario> {
 
     @PersistenceContext(unitName = "GlobalSurveysPU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class SesionPreguntasFacade extends AbstractFacade<SesionPreguntas> {
         return em;
     }
 
-    public SesionPreguntasFacade() {
-        super(SesionPreguntas.class);
+    public UsuarioFacade() {
+        super(Usuario.class);
     }
     
 }
